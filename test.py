@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from app import app, db
+from app import app
 import unittest
 
 class ExampleTest(unittest.TestCase):
@@ -8,7 +8,6 @@ class ExampleTest(unittest.TestCase):
         app.config['WTF_CSRF_METHODS'] = []  # This is the magic
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
         self.app = app.test_client()
-        db.create_all()
 
 class Test(unittest.TestCase):
     def setUp(self):
