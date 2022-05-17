@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-from app import app
+from app import app, db
 import unittest
-
-from project import app, db
 
 class ExampleTest(unittest.TestCase):
    def setUp(self):
